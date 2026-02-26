@@ -1,0 +1,84 @@
+0225 수
+
+from scipy.datasets import face
+
+img = face()
+
+!pip install pooch
+
+img.shape
+(768, 1024, 3)
+세로  가로  채널값
+
+
+import matplotlib.pyplot as plt
+  
+
+plt.imshow(img)
+
+type(img)
+
+img
+
+img[:, :, 0].size = red만 뽑아냄
+
+0 ~ 1 사이의 값으로 압축 /255
+
+숫자가 바뀌더라도 비율을 가지고 계산하기 때문에 이미지 바뀌진 않음
+
+red_array = img_array[:, :, 0]
+green_array = img_array[:, :, 1]
+blue_array = img_array[:, :, 2]
+= 이거는 2차원이 된것
+
+red_img = np.zeros_like(img)
+red_img[:,:,0] = img[:,:,0]
+
+plt.imshow(red_img)
+= 이거는 3차원 그대로 칼라로 감
+
+
+plt.imshow(red_array, cmap='gray')
+= 흑백이 됨
+
+RGB = 빛의 3원색
+
+255, 0 , 0 = 레드
+0, 255, 0 = 그린
+0, 0 , 255 = 블루
+
+0,0,0 = 검정
+255, 255, 255 = 흰색
+ 
+
+색이 밝을 수록 숫자가 커지고 컴퓨터는 거기에 집중
+반전을 시켜서 저장을 함
+이미지에 집중을 하게 됨
+
+안그러면 이미지 밖에 배경에 집중하게 됨
+
+
+3개의 숫자값도 
+반전을 시켜놔야 이미지에 집중하게 됨
+
+가산혼합 = RGB
+감산혼합 = CMYK 색을 빼감 = 겹치면 검은색됨
+값이 작아질 수록 밝아짐
+
+import matplotlib.pyplot as plt 
+colorimetry : img_gray = img_array @ [0.2126, 0.7152, 0.0722]
+이미지로드 : eal = plt.imread('KakaoTalk_20260108_134008050.jpg') 
+이미지보기 : plt.imshow
+
+svd: singular value decomposition 
+특잇값 분해
+
+<판다스>
+
+기본 자료 구조 : 시리즈 , 데이터 프레임
+>시리즈와 어레이의 차이 : 시리즈는 인덱스가 있음
+거의 대부분이 데이터 프레임
+
+데이터베이스에서
+하나의 컬럼만 떼어내면 시리즈로 변경
+
